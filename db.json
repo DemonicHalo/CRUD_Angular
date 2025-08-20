@@ -1,0 +1,100 @@
+{
+  "posts": [
+    {
+      "id": "a28f",
+      "name": "sunil",
+      "email": "sunil@gmail.com",
+      "city": "ktm",
+      "pincode": 23456789,
+      "phonenumber": 1234689
+    },
+    {
+      "id": "3dea",
+      "name": "sachin",
+      "email": "sachin@gmail.com",
+      "city": "ktm",
+      "pincode": 3456789,
+      "phonenumber": 23456789
+    },
+    {
+      "id": "b9a0",
+      "name": "Sunita",
+      "email": "sunita@gmail.com",
+      "city": "ktm",
+      "pincode": 23,
+      "phonenumber": 123456789
+    },
+    {
+      "id": "9ee8",
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "city": "ktm",
+      "pincode": 12345,
+      "phonenumber": 1234567
+    },
+    {
+      "id": "a617",
+      "name": "hari",
+      "email": "hari@gmail.com",
+      "city": "ktm",
+      "pincode": 123456,
+      "phonenumber": 12345678
+    },
+    {
+      "id": "cade",
+      "name": "gita",
+      "email": "gita@gmail.com",
+      "city": "ktm",
+      "pincode": 1234567,
+      "phonenumber": 1234567890
+    },
+    {
+      "id": "a601",
+      "name": "sita",
+      "email": "sita@gmail.com",
+      "city": "ktm",
+      "pincode": 1234567,
+      "phonenumber": 123456789
+    },
+    {
+      "id": "20cc",
+      "name": "ashis",
+      "email": "ashis@gmail.com",
+      "city": "bkt",
+      "pincode": 34567819876543,
+      "phonenumber": 987652345678
+    },
+    {
+      "id": "44bc",
+      "name": "bheem",
+      "email": "bheem@gmail.com",
+      "city": "jhapa",
+      "pincode": 98765456789,
+      "phonenumber": 987654345
+    },
+    {
+      "id": "5c96",
+      "name": "aadarsha",
+      "email": "adarsha@gmail.com",
+      "city": "ktm",
+      "pincode": 65456789876,
+      "phonenumber": 98765456789764560
+    },
+    {
+      "id": "1c95",
+      "name": "allha",
+      "email": "lalal@gmail.com",
+      "city": "ktm",
+      "pincode": 1234567643,
+      "phonenumber": 432112345678
+    },
+    {
+      "id": "a8be",
+      "name": "Rama",
+      "email": "rama@gmail.com",
+      "city": "ktm",
+      "pincode": 15728543801,
+      "phonenumber": 9823467654321
+    }
+  ]
+}

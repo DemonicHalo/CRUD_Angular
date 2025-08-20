@@ -1,0 +1,111 @@
+<!-- FileName: /list/list.component.html -->
+<nav class="navbar bg-dark">
+  <div class="cointainer">
+    <h2>Angular Crud Operation</h2>
+  </div>
+  <div class="d-flex">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Employee</button>
+  </div>
+</nav>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div style="background-color: yellowgreen;" class="modal-header">
+        <h5 style="color: white;" class="modal-title" id="exampleModalLabel">Add Employee Data</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="employeeform">
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">Enter Name</label>
+            <input type="text" class="form-control" formControlName="name" placeholder="Enter Name">
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">Enter Email</label>
+            <input type="Email" class="form-control" formControlName="email" placeholder="Email">
+          </div>
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">Enter City</label>
+            <input type="text" class="form-control" formControlName="city" placeholder="Enter City">
+          </div>
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">Pincode</label>
+            <input type="number" class="form-control" formControlName="pincode" placeholder="Enter Pincode">
+          </div>
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">Phone number</label>
+            <input type="number" class="form-control" formControlName="phonenumber" placeholder="Enter Phone Number">
+          </div>
+        </form>
+      </div>
+      <div style="background-color: yellowgreen;" class="modal-footer">
+        <div class="modal-footer d-flex justify-content-center gap-2" style="background-color: yellowgreen;">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+          <button (click)="addemployee(this.employeeform.value)" [disabled]="this.employeeform.invalid" type="button"
+            class="btn btn-primary">
+            Add
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Search Box -->
+<div class="container mb-3">
+  <input type="text" class="form-control form-control-sm search-input"
+    placeholder="Search by name, email, city, pincode, phone number" [(ngModel)]="searchText" (input)="filterData()" />
+</div>
+<!-- table -->
+<div class="container-fluid mt-3">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">City</th>
+        <th scope="col">Pincode</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of (searchText ? filteredData : data) | paginate: { itemsPerPage: 8, currentPage: p }">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.pincode}}</td>
+        <td>{{item.phonenumber}}</td>
+        <td><a [routerLink]="['/update', item.id]" class="btn btn-warning">Edit</a>
+          &nbsp;
+          <button class="btn btn-danger" (click)="deleteemployee(item)">Delete</button>
+        </td>
+      </tr>
+      <tr>
+
+    </tbody>
+    <pagination-controls (pageChange)="p = $event" autoHide="true" previousLabel="Prev" nextLabel="Next"
+      class="d-flex justify-content-center mt-2">
+    </pagination-controls>
+  </table>
+</div>
+<footer class="bg-body-tertiary text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    <h6> © 2025 DemonicHalo</h6>
+
+  </div>
+
+</footer>
